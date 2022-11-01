@@ -1,0 +1,26 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+
+}
+
+:root {
+    --coloring-nuetral: 200;
+    --coloring-wrong: 0;
+    --coloring-correct: 150;
+}
+
+body {
+    --coloring: var(--coloring-nuetral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 750px;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--coloring), 100%, 20%);
+}
+
+body.correct {
+
+}
