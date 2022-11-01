@@ -9,3 +9,5 @@
 // I will be adding a feature that makes the background red or green depending if u got the question right or wrong which i think will look really cool.
 
 // the second player feature will be added by adding labels to each question to let the users know who's turn it is and it will keep score by each question having a value and a board to keep score of who's winning.
+
+// moved player-con outside of the hide class return it back once you've styled the container.

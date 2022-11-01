@@ -28,12 +28,37 @@ body.wrong {
     --coloring: var(--coloring-wrong);
 }
 
+.welcome-con {
+    position: absolute;
+    bottom: 70%;
+    width: 850px;
+    max-width: 75%;
+    background-color: white;
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0 0 9px 3px;
+    font-weight: bold;
+}
+
+.player-con {
+    position: absolute;
+    bottom: 80%;
+    left: 75%;
+    width: 150px;
+    max-width: 75%;
+    background-color: white;
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0 0 9px 3px;
+    font-weight: bold;
+}
+
 .container {
     width: 850px;
     max-width: 75%;
     background-color: white;
     border-radius: 6px;
-    padding: 15px;
+    padding: 30px;
     box-shadow: 0 0 9px 3px;
 }
 
@@ -48,6 +73,37 @@ body.wrong {
     --coloring: var(--coloring-nuetral);
     background-color: hsl(var(--coloring), 100%, 50%);
     border: 1px solid hsl(var(--coloring), 100%, 30%);
+    color: white;
     border-radius: 6px;
     padding: 6px 11px;
+    outline: none;
+}
+
+.startTrivia-btn, .nextQuestion-btn {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 19px 29px;
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+.btn.correct {
+    --coloring: var(--coloring-correct);
+    color: black;
+}
+
+.btn.wrong {
+    --coloring: var(--coloring-wrong);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
 }
