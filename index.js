@@ -5,7 +5,8 @@ const questionContainer = document.getElementById('question-con')
 const welcomeMessage = document.getElementById('start-title')
 
 const questionElement = document.getElementById('questions')
-const answerBtns = document.getElementById('answers-btns')
+const answerBtns = document.getElementById('answer-btns')
+const nextBtn = document.getElementById('nextQuestion-btn btn')
 
 var playerScore = document.getElementById('player-scoreboard')
 
@@ -30,11 +31,35 @@ console.log('test')
 }
 
 function nextQuestion() {
+    resetQuestion()
+
     showQuestion(shuffleQuestion[currentQuestion])
-    questionElement.innerText = question.question
+    questionElement.innerText = questions.question
 }
 
-show
+function showQuestion(question) {
+    questionElement.innerText = questions.question
+
+    question.answers.forEach(answer => {
+        const button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('btn')
+
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+
+        button.addEventListener('click', selectAnswer)
+        answerBtns.appendChild(button)
+    })
+}
+
+function resetQuestion() {
+    nextBtn.classList.add('hide')
+    while (answerBtns.firstChild) {
+        answerBtns.removeChild(answerBtns.firstChild)
+    }
+ }
 
 function selectAnswer() {
 
