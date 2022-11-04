@@ -11,3 +11,9 @@
 // the second player feature will be added by adding labels to each question to let the users know who's turn it is and it will keep score by each question having a value and a board to keep score of who's winning.
 
 // moved player-con outside of the hide class return it back once you've styled the container.
+
+//fixing styling bugs, when in full screen all my containers are misaligned and look wonky.
+
+//fixed the most annoying bug in my JS right now. there was a line of code in my nextQuestion function that was some how copied from my showQuestion function and would make the question undefined
+
+//Make a function or functions that makes the trivia two player and gets the score

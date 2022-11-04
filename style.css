@@ -28,22 +28,10 @@ body.wrong {
     --coloring: var(--coloring-wrong);
 }
 
-.welcome-con {
-    position: absolute;
-    bottom: 70%;
-    width: 850px;
-    max-width: 75%;
-    background-color: white;
-    border-radius: 6px;
-    padding: 30px;
-    box-shadow: 0 0 9px 3px;
-    font-weight: bold;
-}
-
 .player-con {
     position: absolute;
-    bottom: 80%;
-    left: 75%;
+    bottom: 90%;
+    left: 110%;
     width: 150px;
     max-width: 75%;
     background-color: white;
@@ -54,19 +42,45 @@ body.wrong {
 }
 
 .container {
-    width: 850px;
+    position: absolute;
+    width: 650px;
+    height: 500px;
     max-width: 75%;
+    left: 27%;
     background-color: white;
     border-radius: 6px;
     padding: 30px;
     box-shadow: 0 0 9px 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-con {
+    position: absolute;
+    z-index: 2;
+    bottom: 78%;
+    left: 28.5%;
+    width: 600px;
+    max-width: 75%;
+    background-color: hsl(var(--coloring), 100%, 20%);
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0 0 9px 3px;
+    font-weight: bold;
+    font-size: larger;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
-    margin: 23px 0;
+    margin: 23px 0px;
 }
 
 .btn {
@@ -83,7 +97,11 @@ body.wrong {
     font-size: 1.3rem;
     font-weight: bold;
     padding: 19px 29px;
+    position: absolute;
+    left: 42%;
+    bottom: 15%;
 }
+
 
 .btn:hover {
     border-color: black;
