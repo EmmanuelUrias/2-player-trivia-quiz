@@ -19,12 +19,12 @@ var player2Btn = document.getElementById('player-2-btn')
 var player2Score = document.getElementById('player-2-score')
 let score2 = 0
 
-const winMessage = document.getElementById('winner-message')
 var playerWinner = document.getElementById('winner')
 
 player1Btn.addEventListener('click', function() {
     score1++;
     player1Score.textContent = score1; 
+
     if(score1 > score2) {
         player1Score.classList.add('correct')
     }
@@ -56,36 +56,22 @@ function winnerMessage(name) {
     else {
         playerWinner.textContent = 'Player2'
     }
-
-    console.log('test2')
 }
 
 function drawMessage(name) {
     if (score1 == score2){
         playerWinner.textContent = 'Draw'
     }
-    console.log('test2')
 }
 
 function restartScore() {
-        score1 = 0;
-        score2 = 0;
-    
-        player1Score.textContent = 0;
-        player2Score.textContent = 0;
-    
-        playerWinner.textContent = "";
+    score1 = 0;
+    score2 = 0;
 
-    console.log('test2')
-}
+    player1Score.textContent = 0
+    player2Score.textContent = 0
 
-function showMessage() {
-   
-        winMessage.classList.remove('hide')
-        winnerMessage()
-        drawMessage()
-  
-    console.log('test3')
+    playerWinner.textContent = ""
 }
 
 // Variables to shuffle questions
@@ -110,11 +96,7 @@ playerScoreBoard.classList.remove('hide')
 
 questionContainer.classList.remove('hide')
 
-winMessage.classList.add('hide')
-
 nextQuestion()
-
-restartScore()
 
 console.log('test')
 }
@@ -168,10 +150,9 @@ function selectAnswer(e) {
     if (shuffleQuestion.length > currentQuestion + 1) {
         nextBtn.classList.remove('hide')
     }
-    else{
+    else {
         startTriviaButton.innerText = 'Restart'
         startTriviaButton.classList.remove('hide')
-        showMessage()
     }
     console.log('test')
 }
@@ -192,101 +173,29 @@ function setStatus(element, correct) {
 function clearStatus(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
-    
+    if (shuffleQuestion.length > currentQuestion + 1) {
+        restartScore()
+    }
     console.log('test')
 }
-
 
 // Questions that are shown in the trivia in a random order
 const questions = [
     {
-        question: 'Joey played Dr. Drake Ramoray on which soap opera show?',
+        question: '...',
         answers: [
-             {text: 'Days of Our Lives', correct: true },
-             { text: 'Hospital Horror', correct: false },
-             { text: 'Friends', correct: false },
-             {text: 'Breaking Bad', correct: false}
+             {text: '....', correct: true },
+             { text: '..', correct: false },
+             { text: '.', correct: false }
         ]
     },
     {
-        question: 'How many times was Ross legally divorced?',
+        question: 'Yo',
         answers: [
-            {text: '4 times', correct: false},
-            {text: '3 times', correct: true},
-            {text: 'Twice', correct: false},
-            {text: 'Never Divorced', correct: false}
-        ]
-    },
-    {
-        question: 'Which of the following Chandler “facts” is false?',
-        answers: [
-             {text: 'He dated Phoebe as a kid', correct: true },
-             { text: 'He has a third nipple', correct: false },
-             { text: 'He is missing a pinky toe', correct: false },
-             {text: 'He once won a Vanilla Ice lookalike contest', correct: false}
-        ]
-    },    
-    {
-        question: 'How many times did Chandler and Janice break up during the entirety of Friends?',
-        answers: [
-             {text: '2 times', correct: false},
-             { text: 'once', correct: false},
-             { text: '5 times', correct: true},
-             {text: '7 times', correct: false}
-        ]
-    },
-    {
-        question: 'How many sisters did Joey Tribbiani have?',
-        answers: [
-             {text: '7', correct: true },
-             { text: '4', correct: false },
-             { text: '5', correct: false },
-             {text: '6', correct: false}
-        ]
-    },
-    {
-        question: 'Before they were friends, who did Phoebe mug as a kid?',
-        answers: [
-             {text: 'Joey', correct: false },
-             { text: 'Ross', correct: true },
-             { text: 'Monica', correct: false },
-             {text: 'Chandler', correct: false}
-        ]
-    },
-    {
-        question: 'Which one of the guys did Ursula go out with?',
-        answers: [
-             {text: 'Joey', correct: true },
-             { text: 'Chandler', correct: false },
-             { text: 'Ross', correct: false },
-             {text: 'The Landlord', correct: false}
-        ]
-    },
-    {
-        question: 'What job did Rachels dad have?',
-        answers: [
-             {text: 'Professor', correct: false},
-             { text: 'Attorney', correct: false },
-             { text: 'Doctor', correct: true },
-             {text: 'TV Personality', correct: false}
-        ]
-    },
-    {
-        question: 'What drag name did Chandlers dad go by?',
-        answers: [
-             {text: 'Farrah Moan', correct: false },
-             { text: 'Izzy Rich', correct: false },
-             { text: 'Princess Consuela Bananahammock', correct: false },
-             {text: 'Helena Handbasket', correct: true}
-        ]
-    },
-    {
-        question: 'What was the name of the first restaurant Monica was head chef at?',
-        answers: [
-             {text: 'Iridium', correct: false },
-             { text: 'Moondance Diner', correct: false },
-             { text: 'Javu', correct: false },
-             {text: 'Alessandro`s', correct: true}
+            {text: 'mama', correct: false},
+            {text: 'mrs. white', correct: true},
+            {text: 'yo', correct: false},
+            {text: 'ho', correct: false}
         ]
     }
 ]

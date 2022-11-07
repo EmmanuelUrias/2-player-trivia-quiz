@@ -48,22 +48,13 @@ body.wrong {
     position: absolute;
     bottom: 10%;
     left: 10%;
-    color: white;
-    outline: 1px;
-    --coloring: var(--coloring-nuetral);
-    background-color: hsl(var(--coloring), 100%, 50%);
-    border: 1px solid hsl(var(--coloring), 100%, 30%);
 }
 
 .player-btn-2 {
     position: absolute;
     bottom: 10%;
     left: 50%;
-    color: white;
-    outline: 1px;
-    --coloring: var(--coloring-nuetral);
-    background-color: hsl(var(--coloring), 100%, 50%);
-    border: 1px solid hsl(var(--coloring), 100%, 30%);
+
 }
 
 .container {
@@ -79,45 +70,27 @@ body.wrong {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: larger;
 }
 
 .welcome-con {
     position: absolute;
     z-index: 2;
-    bottom: 68%;
-    left: 32.3%;
-    width: 500px;
-    height: 180px;
+    bottom: 78%;
+    left: 28.5%;
+    width: 600px;
     max-width: 75%;
     background-image: url('Images/Screen Shot 2022-11-05 at 1.46.28 PM.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 550px 280px ;
     background-color: hsl(var(--coloring), 100%, 20%);
     border-radius: 6px;
     padding: 30px;
     box-shadow: 0 0 9px 3px;
+    font-weight: bold;
+    font-size: larger;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     
-}
-
-.instructions-con {
-    position: absolute;
-    width: 950px;
-    height: 100px;
-    max-width: 75%;
-    left: 15%;
-    bottom: -30%;
-    background-color: white;
-    font-size: large;
-    border-radius: 6px;
-    padding: 20px;
-    box-shadow: 0 0 9px 3px;
-    display: flex;
-    justify-content: center;
 }
 
 .winner-con {
@@ -141,23 +114,16 @@ body.wrong {
     color: white;
     border-radius: 6px;
     padding: 6px 11px;
-    outline: 1px;
+    outline: none;
 }
 
 .startTrivia-btn, .nextQuestion-btn {
-    --coloring: var(--coloring-nuetral);
-    background-color: hsl(var(--coloring), 100%, 50%);
-    border: 1px solid hsl(var(--coloring), 100%, 30%);
-    color: white;
     font-size: 1.3rem;
     font-weight: bold;
     padding: 19px 29px;
     position: absolute;
     left: 42%;
     bottom: 15%;
-    border-radius: 6px;
-    outline: 1px;
-    box-shadow: 0 0 2px 2px;
 }
 
 
