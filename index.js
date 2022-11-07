@@ -39,7 +39,7 @@ player2Btn.addEventListener('click', function() {
     score2++;
     player2Score.textContent = score2;
 
-    if(score2>score1 || score2>shuffleQuestion.length) {
+    if(score2>score1) {
         player1Score.classList.add('correct')
     }
 
@@ -57,14 +57,12 @@ function winnerMessage(name) {
         playerWinner.textContent = 'Player2'
     }
 
-    console.log('test2')
 }
 
 function drawMessage(name) {
     if (score1 == score2){
         playerWinner.textContent = 'Draw'
     }
-    console.log('test2')
 }
 
 function restartScore() {
@@ -75,8 +73,6 @@ function restartScore() {
         player2Score.textContent = 0;
     
         playerWinner.textContent = "";
-
-    console.log('test2')
 }
 
 function showMessage() {
@@ -84,9 +80,7 @@ function showMessage() {
         winMessage.classList.remove('hide')
         winnerMessage()
         drawMessage()
-  
-    console.log('test3')
-}
+  }
 
 // Variables to shuffle questions
 let shuffleQuestion, currentQuestion
@@ -115,8 +109,6 @@ winMessage.classList.add('hide')
 nextQuestion()
 
 restartScore()
-
-console.log('test')
 }
 
 // Resets the question and answers, then grabs the new question to be shown as the next question
@@ -125,7 +117,6 @@ function nextQuestion() {
 
     showQuestion(shuffleQuestion[currentQuestion])    
 
-    console.log('test')
 }
 
 // Grabs the next question and shows it and the answers 
@@ -144,7 +135,6 @@ function showQuestion(question) {
         button.addEventListener('click', selectAnswer)
         answerBtns.appendChild(button)
     })
-    console.log('test')
 }
 
 // Resets the pages question and answers
@@ -154,7 +144,6 @@ function resetQuestion() {
     while (answerBtns.firstChild) {
         answerBtns.removeChild(answerBtns.firstChild)
     }
-    console.log('test')
  }
 
  //Makes answer buttons work
@@ -173,7 +162,6 @@ function selectAnswer(e) {
         startTriviaButton.classList.remove('hide')
         showMessage()
     }
-    console.log('test')
 }
 
 // Tells us whether if a question is right or wrong
@@ -185,7 +173,6 @@ function setStatus(element, correct) {
     else {
         element.classList.add('wrong')
     }
-    console.log('test')
 }
 
 // Removes the correct or wrong status to remove the red and/or green coloring
@@ -193,7 +180,6 @@ function clearStatus(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
     
-    console.log('test')
 }
 
 
