@@ -1,0 +1,194 @@
+@import 'color-variables';
+@import 'width-height-variables';
+@import 'mixins';
+@import 'functions';
+  
+  * {
+    @include border-box;
+  }
+
+:root {
+  --coloring-nuetral: #{$color-nuetral};
+  --coloring-wrong: #{$color-wrong};
+  --coloring-correct: #{$color-correct};
+}
+
+body {
+    --coloring: var(--coloring-nuetral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 753px;
+    height: 605px;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--coloring), 100%, 20%);
+
+    .welcome-con {
+        position: absolute;
+        z-index: 2;
+        bottom: 68%;
+        left: 32.3%;
+        width: 500px;
+        height: 180px;
+        max-width: 75%;
+        background-image: url('Images/Screen Shot 2022-11-05 at 1.46.28 PM.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 550px 280px ;
+        background-color: hsl(var(--coloring), 100%, 20%);
+        border-radius: 6px;
+        padding: 30px;
+        box-shadow: 0 0 9px 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+
+body.correct {
+    --coloring: var(--coloring-correct);
+}
+body.wrong {
+    --coloring: var(--coloring-wrong);
+}
+
+.player-con {
+    position: absolute;
+    bottom: 85%;
+    left: 110%;
+    height: $height;
+    width: definingWidth($height);
+    max-width: 75%;
+    background-color: $white-color;
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0 2px 9px 3px;
+    font-weight: bold;
+    font-size: medium;
+    justify-content: center;
+    align-items: center;
+    
+    .player-btn-1 {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        color: $white-color;
+        outline: 1px;
+        --coloring: var(--coloring-nuetral);
+        background-color: hsl(var(--coloring), 100%, 50%);
+        border: 1px solid hsl(var(--coloring), 100%, 30%);
+    }
+
+    .player-btn-2 {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        color: $white-color;
+        outline: 1px;
+        --coloring: var(--coloring-nuetral);
+        background-color: hsl(var(--coloring), 100%, 50%);
+        border: 1px solid hsl(var(--coloring), 100%, 30%);
+    }
+}
+
+.container {
+    position: absolute;
+    width: $width;
+    height: definingHeight($width);
+    max-width: 75%;
+    left: 27%;
+    background-color: $white-color;
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0 0 9px 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    
+    .instructions-con {
+        position: absolute;
+        width: 950px;
+        height: 550px;
+        max-width: 75%;
+        left: 15%;
+        bottom: -30%;
+        background-color: $white-color;
+        font-size: large;
+        border-radius: 6px;
+        padding: 20px;
+        box-shadow: 0 0 9px 3px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .winner-con {
+        position: absolute;
+        bottom: 80%;
+        left: 30%;
+        font-size: xx-large;
+    }
+}
+
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 23px 0px;
+    
+    .btn {
+        --coloring: var(--coloring-nuetral);
+        background-color: hsl(var(--coloring), 100%, 50%);
+        border: 1px solid hsl(var(--coloring), 100%, 30%);
+        color: $white-color;
+        border-radius: 6px;
+        padding: 6px 11px;
+        outline: 1px;
+    }
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .startTrivia-btn {
+        @include start-and-trivia-btn-styling()
+    }
+
+    .nextQuestion-btn {
+        @include start-and-trivia-btn-styling()
+    }
+} 
+
+.btn:hover {
+    @include btn-hover-effect()
+}
+
+.btn.correct {
+    --coloring: var(--coloring-correct);
+    color: $black-color;
+}
+
+.btn.wrong {
+    --coloring: var(--coloring-wrong);
+}
+
+.hide {
+    display: none;
+}
+
+.image-1 {
+    position: absolute;
+    height: 250px;
+    left: .5%;
+}
+
+.image-2 {
+    position: absolute;
+    height: 250px;
+    left: 72.5%;
+}

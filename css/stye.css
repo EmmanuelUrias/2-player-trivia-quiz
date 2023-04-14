@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+}
+*::before {
+  box-sizing: border-box;
+}
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --coloring-nuetral: 200;
+  --coloring-wrong: 0;
+  --coloring-correct: 150;
+}
+
+body {
+  --coloring: var(--coloring-nuetral);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 753px;
+  height: 605px;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--coloring), 100%, 20%);
+}
+
+body.correct {
+  --coloring: var(--coloring-correct);
+}
+
+body.wrong {
+  --coloring: var(--coloring-wrong);
+}
+
+.player-con {
+  position: absolute;
+  bottom: 85%;
+  left: 110%;
+  height: 100px;
+  width: 150px;
+  max-width: 75%;
+  background-color: white;
+  border-radius: 6px;
+  padding: 30px;
+  box-shadow: 0 2px 9px 3px;
+  font-weight: bold;
+  font-size: medium;
+  justify-content: center;
+  align-items: center;
+}
+.player-con .player-btn-1 {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color: white;
+  outline: 1px;
+  --coloring: var(--coloring-nuetral);
+  background-color: hsl(var(--coloring), 100%, 50%);
+  border: 1px solid hsl(var(--coloring), 100%, 30%);
+}
+.player-con .player-btn-2 {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  color: white;
+  outline: 1px;
+  --coloring: var(--coloring-nuetral);
+  background-color: hsl(var(--coloring), 100%, 50%);
+  border: 1px solid hsl(var(--coloring), 100%, 30%);
+}
+
+.welcome-con {
+  position: absolute;
+  z-index: 2;
+  bottom: 68%;
+  left: 32.3%;
+  width: 500px;
+  height: 180px;
+  max-width: 75%;
+  background-image: url("Images/Screen Shot 2022-11-05 at 1.46.28 PM.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 550px 280px;
+  background-color: hsl(var(--coloring), 100%, 20%);
+  border-radius: 6px;
+  padding: 30px;
+  box-shadow: 0 0 9px 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  width: 650px;
+  height: 500px;
+  max-width: 75%;
+  left: 27%;
+  background-color: white;
+  border-radius: 6px;
+  padding: 30px;
+  box-shadow: 0 0 9px 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+}
+.container .instructions-con {
+  position: absolute;
+  width: 950px;
+  height: 130px;
+  max-width: 75%;
+  left: 15%;
+  bottom: -30%;
+  background-color: white;
+  font-size: large;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0 0 9px 3px;
+  display: flex;
+  justify-content: center;
+}
+.container .winner-con {
+  position: absolute;
+  bottom: 80%;
+  left: 30%;
+  font-size: xx-large;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 23px 0px;
+}
+.btn-grid .btn {
+  --coloring: var(--coloring-nuetral);
+  background-color: hsl(var(--coloring), 100%, 50%);
+  border: 1px solid hsl(var(--coloring), 100%, 30%);
+  color: white;
+  border-radius: 6px;
+  padding: 6px 11px;
+  outline: 1px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.controls .startTrivia-btn {
+  --coloring: var(--coloring-nuetral);
+  background-color: hsl(var(--coloring), 100%, 50%);
+  border: 1px solid hsl(var(--coloring), 100%, 30%);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 19px 29px;
+  position: absolute;
+  left: 42%;
+  bottom: 15%;
+  border-radius: 6px;
+  outline: 1px;
+  box-shadow: 0 0 2px 2px;
+}
+.controls .nextQuestion-btn {
+  --coloring: var(--coloring-nuetral);
+  background-color: hsl(var(--coloring), 100%, 50%);
+  border: 1px solid hsl(var(--coloring), 100%, 30%);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 19px 29px;
+  position: absolute;
+  left: 42%;
+  bottom: 15%;
+  border-radius: 6px;
+  outline: 1px;
+  box-shadow: 0 0 2px 2px;
+}
+
+.btn:hover:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  --coloring: var(--coloring-correct);
+  color: black;
+}
+
+.btn.wrong {
+  --coloring: var(--coloring-wrong);
+}
+
+.hide {
+  display: none;
+}
+
+.image-1 {
+  position: absolute;
+  height: 250px;
+  left: 0.5%;
+}
+
+.image-2 {
+  position: absolute;
+  height: 250px;
+  left: 72.5%;
+}
+
+/*# sourceMappingURL=stye.css.map */

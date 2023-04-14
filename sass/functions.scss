@@ -1,0 +1,13 @@
+@function definingWidth($height: false) {
+    @if $height == false {
+        @return 150px;
+    }
+    @return calc($height + 50%);
+}
+
+@function definingHeight($width: false) {
+    @if $width == false {
+        @return 500px;
+    }
+    @return $width - 150;
+}

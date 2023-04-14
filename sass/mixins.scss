@@ -1,0 +1,33 @@
+@mixin border-box {
+    box-sizing: border-box;
+  
+    &::before {
+      box-sizing: border-box;
+    }
+  
+    &::after {
+      box-sizing: border-box;
+    }
+  }
+
+  @mixin start-and-trivia-btn-styling {
+    --coloring: var(--coloring-nuetral);
+    background-color: hsl(var(--coloring), 100%, 50%);
+    border: 1px solid hsl(var(--coloring), 100%, 30%);
+    color: $white-color;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 19px 29px;
+    position: absolute;
+    left: 42%;
+    bottom: 15%;
+    border-radius: 6px;
+    outline: 1px;
+    box-shadow: 0 0 2px 2px;
+}
+
+@mixin btn-hover-effect {
+    &:hover {
+        border-color: $black-color;
+    }
+}
